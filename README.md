@@ -1,0 +1,1 @@
+# IA-44_INDEPENDENT-DoroshenkoNazar-FIOT-2026
