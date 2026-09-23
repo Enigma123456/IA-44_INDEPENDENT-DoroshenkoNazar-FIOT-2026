@@ -3,50 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Самостійні роботи - Дорошенко Назар</title>
+    <title>Самостійна робота №1 - Дорошенко Назар</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
             color: #333;
         }
         .container {
             background-color: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 900px;
             margin: 0 auto;
         }
-        h1 {
+        h1 { text-align: center; color: #2c3e50; }
+        h2 { 
+            color: #34495e; 
+            border-bottom: 2px solid #3498db; 
+            padding-bottom: 5px; 
+            margin-top: 40px; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
             text-align: center;
-            color: #2c3e50;
         }
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 30px;
+        th { background-color: #ecf0f1; }
+        .form-group {
+            margin-bottom: 15px;
         }
-        p {
-            line-height: 1.6;
+        label { font-weight: bold; display: block; margin-bottom: 5px; }
+        input[type="text"], input[type="email"], select {
+            width: 100%; padding: 8px; box-sizing: border-box;
         }
+        .btn-submit {
+            padding: 10px 20px; background-color: #27ae60; color: white; border: none; cursor: pointer;
+        }
+        .btn-submit:hover { background-color: #2ecc71; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Самостійна робота №1</h1>
+        <h1>Самостійна робота №1 (HTML5)</h1>
+        <p><strong>Виконав:</strong> Дорошенко Назар, група ІА-44</p>
+        
+        <a href="#form-section" style="color: #e74c3c; font-weight: bold;">Перейти відразу до Форми (Створення закладок)</a>
 
-        <h2>Завдання 1. Опис структури</h2>
-        <p>Тут буде знаходитись текст першого завдання з протоколу самостійної роботи.</p>
+        <h2>1. Основи HTML, Елементи та Параграфи</h2>
+        <p title="Це спливаюча підказка (атрибут title)">Це звичайний параграф тексту. Наведіть сюди мишкою, щоб побачити роботу атрибута <code>title</code>.</p>
+        <p>У цьому тексті використано <b>жирний шрифт (b)</b>, <i>курсив (i)</i>, та <mark>маркування (mark)</mark>. <br> А тут ми зробили перенесення рядка тегом <code>&lt;br&gt;</code>.</p>
+        <hr>
 
-        <h2>Завдання 2. Робота з тегами</h2>
-        <p>Тут буде знаходитись текст другого завдання. Кожен підзаголовок коректно обгорнуто тегом h2.</p>
+        <h2>2. Робота з посиланнями</h2>
+        <ul>
+            <li><a href="https://w3schoolsua.github.io/" target="_blank">Стандартне посилання (відкриється в новій вкладці)</a></li>
+            <li><a href="#" style="color: green; text-decoration: none;">Посилання із застосуванням стилів (зелене, без підкреслення)</a></li>
+        </ul>
 
-        <h2>Завдання 3. Висновки</h2>
-        <p>Тут будуть висновки до самостійної роботи.</p>
+        <h2>3. Робота із зображеннями (img та picture)</h2>
+
+        <img src="https://kulturologia.ru/files/u18172/181726305.jpg" alt="Приклад зображення" width="150" height="150" style="border: 2px solid #333;">
+        
+        <picture>
+            <source media="(min-width: 650px)" srcset="https://ms.detector.media/doc/images/news/15454/i75_ArticleImage_15454.jpg">
+            <img src="https://www.5.ua/media/pictures/original/294300.jpg?t=1725796642" alt="Адаптивне зображення" style="margin-left: 20px; width: 50%;">
+        </picture>
+
+        <h2>4. Робота з таблицями (Colspan, Rowspan, Headers)</h2>
+        <table>
+            <colgroup>
+                <col style="background-color: #f9f9f9;">
+                <col span="2" style="background-color: #eaf2f8;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">№ п/п</th>
+                    <th colspan="2">Дані студента</th>
+                </tr>
+                <tr>
+                    <th>Предмет</th>
+                    <th>Оцінка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Frontend Розробка</td>
+                    <td>Відмінно</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Бази даних</td>
+                    <td>Добре</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. Робота зі списками</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <div>
+                <h3>Невпорядкований список (ul)</h3>
+                <ul style="list-style-type: square;">
+                    <li>Елемент списку 1</li>
+                    <li>Елемент списку 2</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Впорядкований список (ol)</h3>
+                <ol type="I">
+                    <li>Перший пункт</li>
+                    <li>Другий пункт</li>
+                </ol>
+            </div>
+            <div>
+                <h3>Список описів (dl)</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>- Мова гіпертекстової розмітки</dd>
+                    <dt>CSS</dt>
+                    <dd>- Каскадні таблиці стилів</dd>
+                </dl>
+            </div>
+        </div>
+
+        <h2 id="form-section">6. Робота з формами та типами вводу</h2>
+        <form action="#" method="POST" style="background-color: #f8f9fa; padding: 20px; border: 1px solid #ddd;">
+            <div class="form-group">
+                <label for="username">Ім'я користувача (text):</label>
+                <input type="text" id="username" name="username" placeholder="Введіть ваше ім'я" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Електронна пошта (email):</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Оберіть курс (radio):</label>
+                <input type="radio" id="course1" name="course" value="1" checked>
+                <label for="course1" style="display:inline; font-weight: normal;">1 Курс</label>
+                <input type="radio" id="course2" name="course" value="2">
+                <label for="course2" style="display:inline; font-weight: normal;">2 Курс</label>
+                <input type="radio" id="course3" name="course" value="3">
+                <label for="course3" style="display:inline; font-weight: normal;">3 Курс</label>
+            </div>
+
+            <div class="form-group">
+                <label>Додаткові опції (checkbox):</label>
+                <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                <label for="subscribe" style="display:inline; font-weight: normal;">Отримувати розсилку</label>
+            </div>
+
+            <div class="form-group">
+                <label for="faculty">Факультет (select):</label>
+                <select id="faculty" name="faculty">
+                    <option value="fiot">ФІОТ</option>
+                    <option value="fpm">ФПМ</option>
+                    <option value="ipsa">ІПСА</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Відправити форму</button>
+        </form>
+
     </div>
 
 </body>
